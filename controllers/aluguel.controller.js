@@ -15,21 +15,9 @@ const create = async (req, res) => {
             res.status(400).send({ message: "Submit all fields for registration." })
         }
 
-        console.log(carro._id)
-        console.log(fimAluguel)
-
-        console.log(getFinalDate)
-
-        console.log(dateToday)
-
-
         const rent = await aluguelService.findService();
 
         const hasThisCar = await aluguelService.findAllService();
-
-        console.log(rent)
-
-        console.log(hasThisCar)
 
         const id = carro._id
 
